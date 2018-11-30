@@ -64,17 +64,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * | Ctrl |   A  |   S  |   D  |   F  |   G  |             |   H  |   J  |   K  |   L  |  ;+  |  :*  |
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
-   * | Shift|   Z  |   X  |   C  |   V  |   B  |             |   N  |   M  |  ,<  |  .>  |  /?  |      |
+   * | Shift|   Z  |   X  |   C  |   V  |   B  |             |   N  |   M  |  ,<  |  .>  |  /?  |  _   |
    * |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
    * |Adjust| GUI  |Raise | Ctrl | Bksp | Alt  |Lower |Enter | Alt  |Space | Ctrl |Raise |      | Esc  |
    * `-------------------------------------------------------------------------------------------------'
    */
 
   [_QWERTY] = LAYOUT( \
-      KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                      KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,  JP_YEN, \
-      KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                      KC_H,    KC_J,    KC_K,    KC_L, KC_SCLN, KC_COLN, \
-      KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                      KC_N,    KC_M, JP_COMM,  JP_DOT, JP_SLSH, _______, \
-      ADJUST,  KC_LGUI, RAISE,KC_LCTL, KC_BSPC, KC_LALT,   LOWER,  KC_ENT, KC_RALT,  KC_SPC, KC_RCTL,   RAISE, _______,  KC_ESC \
+      KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                      KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    JP_YEN, \
+      KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                      KC_H,    KC_J,    KC_K,    KC_L,    JP_SCLN, JP_COLN, \
+      KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                      KC_N,    KC_M,    JP_COMM, JP_DOT,  JP_SLSH, JP_UNDS, \
+      ADJUST,  KC_LGUI, RAISE,   KC_LCTL, KC_BSPC, KC_LALT,   LOWER,  KC_ENT, KC_RALT, KC_SPC,  KC_RCTL, RAISE,   _______, KC_ESC \
       ),
 
   /* Eucalyn
@@ -83,17 +83,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * | Ctrl |   A  |   O  |   E  |   I  |   U  |             |   G  |   T  |   K  |   S  |   N  |  :*  |
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
-   * | Shift|   Z  |   X  |   C  |   V  |   F  |             |   B  |   H  |   J  |   L  |  /?  |      |
+   * | Shift|   Z  |   X  |   C  |   V  |   F  |             |   B  |   H  |   J  |   L  |  /?  |  _   |
    * |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
    * |Adjust| GUI  |Raise | Ctrl | Bksp | Alt  |Lower |Enter | Alt  |Space | Ctrl |Raise |      | Esc  |
    * `-------------------------------------------------------------------------------------------------'
   */
 
   [_EUCALYN] = LAYOUT( \
-      KC_TAB,  KC_Q,    KC_W,    JP_COMM, JP_DOT,  JP_SCLN,                   KC_M,    KC_R,    KC_D,    KC_Y,    KC_P,  JP_YEN, \
-      KC_LCTL, KC_A,    KC_O,    KC_E,    KC_I,    KC_U,                      KC_G,    KC_T,    KC_K,    KC_S,    KC_N, KC_COLN, \
-      KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_F,                      KC_B,    KC_H,    KC_J,    KC_L, JP_SLSH, _______, \
-      ADJUST,  KC_LGUI, RAISE,KC_LCTL, KC_BSPC, KC_LALT,   LOWER,  KC_ENT, KC_RALT,  KC_SPC, KC_RCTL,   RAISE, _______,  KC_ESC \
+      KC_TAB,  KC_Q,    KC_W,    JP_COMM, JP_DOT,  JP_SCLN,                   KC_M,    KC_R,    KC_D,    KC_Y,    KC_P,    JP_YEN, \
+      KC_LCTL, KC_A,    KC_O,    KC_E,    KC_I,    KC_U,                      KC_G,    KC_T,    KC_K,    KC_S,    KC_N,    JP_COLN, \
+      KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_F,                      KC_B,    KC_H,    KC_J,    KC_L,    JP_SLSH, JP_UNDS, \
+      ADJUST,  KC_LGUI, RAISE,   KC_LCTL, KC_BSPC, KC_LALT,   LOWER,  KC_ENT, KC_RALT, KC_SPC,  KC_RCTL, RAISE,   _______, KC_ESC \
       ),
 
   /* Lower
@@ -104,14 +104,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * | Shift|   %  |   `  |   $  |   |  |   {  |             |   }  |   1  |   2  |   3  |   +  |  ^   |
    * |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
-   * |      |   \  |      |      |      |      |      | Calc |      |   0  |   ,  |   .  |   /  |Enter |
+   * |      |   \  |      |      |      |   <  |      | Calc |   >  |   ,  |   0  |   .  |   /  |Enter |
    * `-------------------------------------------------------------------------------------------------'
    */
   [_LOWER] = LAYOUT( \
-      KC_TAB,  KC_EXLM, KC_DQUO, KC_AT,   KC_UNDS, KC_LBRC,                   KC_RBRC, KC_7,    KC_8,    KC_9,    KC_ASTR, KC_BSPC, \
-      KC_LCTL, KC_TILD, KC_QUOT, KC_HASH, KC_AMPR, KC_LPRN,                   KC_RPRN, KC_4,    KC_5,    KC_6,    KC_MINS, KC_EQL, \
-      KC_LSFT, KC_PERC, KC_GRV,  KC_DLR,  KC_PIPE, KC_LCBR,                   KC_RCBR, KC_1,    KC_2,    KC_3,    KC_PLUS, KC_CIRC, \
-      _______, KC_BSLS, _______ ,_______, _______, _______, _______, KC_CALC, _______, KC_0,    KC_COMM, KC_DOT,  KC_SLSH, KC_ENT \
+      KC_TAB,  JP_EXLM, JP_DQT,  JP_AT,   JP_UNDS, JP_LBRC,                   JP_RBRC, KC_7,    KC_8,    KC_9,    JP_ASTR, KC_BSPC, \
+      KC_LCTL, JP_TILD, JP_QUOT, JP_HASH, JP_AMPR, JP_LPRN,                   JP_RPRN, KC_4,    KC_5,    KC_6,    JP_MINS, JP_EQL, \
+      KC_LSFT, JP_PERC, JP_GRV,  JP_DLR,  JP_PIPE, JP_LCBR,                   JP_RCBR, KC_1,    KC_2,    KC_3,    JP_PLUS, JP_CIRC, \
+      _______, JP_BSLS, _______ ,_______, _______, JP_LT,   _______, KC_CALC, JP_GT,   JP_COMM, KC_0,    JP_DOT,  JP_SLSH, KC_ENT \
       ),
 
   /* Raise
@@ -120,9 +120,9 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * | Ctrl |      |M_Btn3|M_Btn2|M_Btn1|Whl_Up|             |      | M_Up |      |      |  Up  |      |
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
-   * | Shift|      |M_Spd2|M_Spd1|M_Spd0|Whl_Dn|             |M_Left|M_Down|M_Rght| Left | Down |Right |
+   * | Shift|      |M_Spd2|M_Spd1|M_Spd0|Whl_Dn|             |M_Left|      |M_Rght| Left |      |Right |
    * |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
-   * |      |      |      |      |      |      |      |      |      |      |      |      |      |      |
+   * |      |      |      |      |      |      |      |      |      |M_Down|      |      | Down |      |
    * `-------------------------------------------------------------------------------------------------'
    * KC_WH_L KC_WH_R
    */
@@ -135,7 +135,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* Adjust (Lower + Raise)
    * ,-----------------------------------------.             ,-----------------------------------------.
-   * |ZenHan| Reset|      |Qwerty|Eucaln| Win  |             | PrSc |      |      | Ins  | Home |PageUp|
+   * |ZenHan| Reset|      |Qwerty|Eucaln| Win  |             | PrSc |ScrLK | Ins  | Del  | Home |PageUp|
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * |Henkan|Aud on|Audoff|MU TOG|MU MOD| Mac  |             | Next | Vol- | Vol+ | Play |  End |PageDn|
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
@@ -146,8 +146,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * EISU KANA
    */
   [_ADJUST] =  LAYOUT( \
-      KC_LANG5,RESET,   _______, QWERTY,  EUCALYN, AG_NORM,                   KC_PSCR, _______, _______, KC_INS,  KC_HOME, KC_PGUP, \
-      KC_HENK, AU_ON,   AU_OFF,  MU_TOG,  MU_MOD,  AG_SWAP,                   KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY, KC_END,  KC_PGDN, \
+      JP_ZHTG, RESET,  _______,  QWERTY,  EUCALYN, AG_NORM,                   KC_PSCR, KC_SCLK, KC_INS,  KC_DEL,  KC_HOME, KC_PGUP, \
+      JP_HENK, AU_ON,   AU_OFF,  MU_TOG,  MU_MOD,  AG_SWAP,                   KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY, KC_END,  KC_PGDN, \
       _______, CK_TOGG, CK_RST,  CK_UP,   CK_DOWN, _______,                   _______, _______, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, \
       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD \
       )
