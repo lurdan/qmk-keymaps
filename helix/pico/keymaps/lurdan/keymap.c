@@ -56,6 +56,16 @@ enum macro_keycodes {
 //Macros
 #define M_SAMPLE M(KC_SAMPLEMACRO)
 
+#define CTL_ESC CTL_T(KC_ESC)
+#define TAB_LOWR LT(_LOWER,KC_TAB)
+#define ENT_RAIS LT(_RAISE,KC_ENT)
+
+#define CTL_CMD LCTL(KC_LCMD)
+#define CMD_EISU LGUI_T(KC_LANG2)
+#define CMD_KANA RGUI_T(KC_LANG1)
+#define ALT_MHEN LALT_T(KC_MHEN)
+#define ALT_HENK RALT_T(KC_HENK)
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   /* Qwerty
@@ -66,7 +76,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * | Shift|   Z  |   X  |   C  |   V  |   B  |             |   N  |   M  |  ,<  |  .>  |  /?  |  _   |
    * |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
-   * |Adjust| GUI  |Raise | Ctrl | Bksp | Alt  |Lower |Enter | Alt  |Space | Ctrl |Raise |      | Esc  |
+   * |Adjust|Raise | GUI  | Alt  |CtlEsc| Bksp |TabLwr|EnRais|Space | Alt  | Ctrl |Lower |      |      |
    * `-------------------------------------------------------------------------------------------------'
    */
 
@@ -74,7 +84,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                      KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    JP_YEN, \
       KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                      KC_H,    KC_J,    KC_K,    KC_L,    JP_SCLN, JP_COLN, \
       KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,                      KC_N,    KC_M,    JP_COMM, JP_DOT,  JP_SLSH, JP_UNDS, \
-      ADJUST,  KC_LGUI, RAISE,   KC_LCTL, KC_BSPC, KC_LALT,   LOWER,  KC_ENT, KC_RALT, KC_SPC,  KC_RCTL, RAISE,   _______, KC_ESC \
+      ADJUST, RAISE,  KC_LGUI, KC_LALT,   CTL_ESC, KC_BSPC,TAB_LOWR,ENT_RAIS, KC_SPC, KC_RALT,  KC_RCTL, LOWER,   _______, _______ \
       ),
 
   /* Eucalyn
@@ -146,7 +156,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * EISU KANA
    */
   [_ADJUST] =  LAYOUT( \
-      JP_ZHTG, RESET,  _______,  QWERTY,  EUCALYN, AG_NORM,                   KC_PSCR, KC_SCLK, KC_INS,  KC_DEL,  KC_HOME, KC_PGUP, \
+      JP_ZHTG, RESET,  _______,  QWERTY,  EUCALYN, AG_NORM,                   KC_PSCR, KC_SLCK, KC_INS,  KC_DEL,  KC_HOME, KC_PGUP, \
       JP_HENK, AU_ON,   AU_OFF,  MU_TOG,  MU_MOD,  AG_SWAP,                   KC_MNXT, KC_VOLD, KC_VOLU, KC_MPLY, KC_END,  KC_PGDN, \
       _______, CK_TOGG, CK_RST,  CK_UP,   CK_DOWN, _______,                   _______, _______, RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, \
       _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, RGB_MOD, RGB_HUD, RGB_SAD, RGB_VAD \
