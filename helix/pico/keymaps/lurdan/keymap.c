@@ -104,14 +104,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * | Shift|   %  |   `  |   $  |   |  |   {  |             |   }  |   1  |   2  |   3  |   +  |  ^   |
    * |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
-   * |      |   \  |      |      |      |   <  |      | Calc |   >  |   ,  |   0  |   .  |   /  |Enter |
+   * |      |   \  |      |      |      |   <  | Calc |Enter |   >  |   ,  |   0  |   .  |   /  |Enter |
    * `-------------------------------------------------------------------------------------------------'
    */
   [_LOWER] = LAYOUT( \
       KC_TAB,  JP_EXLM, JP_DQT,  JP_AT,   JP_UNDS, JP_LBRC,                   JP_RBRC, KC_7,    KC_8,    KC_9,    JP_ASTR, KC_BSPC, \
       KC_LCTL, JP_TILD, JP_QUOT, JP_HASH, JP_AMPR, JP_LPRN,                   JP_RPRN, KC_4,    KC_5,    KC_6,    JP_MINS, JP_EQL, \
       KC_LSFT, JP_PERC, JP_GRV,  JP_DLR,  JP_PIPE, JP_LCBR,                   JP_RCBR, KC_1,    KC_2,    KC_3,    JP_PLUS, JP_CIRC, \
-      _______, JP_BSLS, _______ ,_______, _______, JP_LT,   _______, KC_CALC, JP_GT,   JP_COMM, KC_0,    JP_DOT,  JP_SLSH, KC_ENT \
+      _______, JP_BSLS, _______ ,_______, _______, JP_LT,   KC_CALC, KC_ENT,  JP_GT,   JP_COMM, KC_0,    JP_DOT,  JP_SLSH, KC_ENT \
       ),
 
   /* Raise
@@ -120,7 +120,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * | Ctrl |      |M_Btn3|M_Btn2|M_Btn1|Whl_Up|             |      | M_Up |      |      |  Up  |      |
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
-   * | Shift|      |M_Spd2|M_Spd1|M_Spd0|Whl_Dn|             |M_Left|      |M_Rght| Left |      |Right |
+   * | Shift|      |M_Spd2|M_Spd1|M_Spd0|Whl_Dn|             |M_Left|M_Down|M_Rght| Left | Down |Right |
    * |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
    * |      |      |      |      |      |      |      |      |      |M_Down|      |      | Down |      |
    * `-------------------------------------------------------------------------------------------------'
@@ -129,7 +129,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_RAISE] = LAYOUT( \
       KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   KC_F6,                     KC_F7,   KC_F8,   KC_F9,   KC_F10,  KC_F11,  KC_F12 , \
       KC_LCTL, _______, KC_BTN3, KC_BTN2, KC_BTN1, KC_WH_U,                   _______, KC_MS_U, _______, _______, KC_UP,   _______, \
-      KC_LSFT, _______, KC_ACL0, KC_ACL1, KC_ACL2, KC_WH_D,                   KC_MS_L, _______, KC_MS_R, KC_LEFT, _______, KC_RGHT, \
+      KC_LSFT, _______, KC_ACL0, KC_ACL1, KC_ACL2, KC_WH_D,                   KC_MS_L, KC_MS_D, KC_MS_R, KC_LEFT, KC_DOWN, KC_RGHT, \
       _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_MS_D, _______, _______, KC_DOWN, _______  \
       ),
 
