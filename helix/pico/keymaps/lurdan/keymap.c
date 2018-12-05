@@ -56,6 +56,8 @@ enum macro_keycodes {
 //Macros
 #define M_SAMPLE M(KC_SAMPLEMACRO)
 
+//Tap
+#define RETRO_TAPPING
 #define CTL_ESC CTL_T(KC_ESC)
 #define TAB_LOWR LT(_LOWER,KC_TAB)
 #define ENT_RAIS LT(_RAISE,KC_ENT)
