@@ -116,14 +116,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
    * |------+------+------+------+------+------|             |------+------+------+------+------+------|
    * | Shift|   %  |   `  |   $  |   |  |   {  |             |   }  |   1  |   2  |   3  |   +  |  ^   |
    * |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
-   * |      |   \  |      |      |      |   <  | Calc |Enter |   >  |   ,  |   0  |   .  |   /  |Enter |
+   * | Calc |  \_  |      |      |      |   <  |      |      |   >  |   0  |   ,  |   .  |   /  |Enter |
    * `-------------------------------------------------------------------------------------------------'
    */
   [_LOWER] = LAYOUT( \
       KC_TAB,  JP_EXLM, JP_DQT,  JP_AT,   JP_UNDS, JP_LBRC,                   JP_RBRC, KC_7,    KC_8,    KC_9,    JP_ASTR, KC_BSPC, \
       KC_LCTL, JP_TILD, JP_QUOT, JP_HASH, JP_AMPR, JP_LPRN,                   JP_RPRN, KC_4,    KC_5,    KC_6,    JP_MINS, JP_EQL, \
       KC_LSFT, JP_PERC, JP_GRV,  JP_DLR,  JP_PIPE, JP_LCBR,                   JP_RCBR, KC_1,    KC_2,    KC_3,    JP_PLUS, JP_CIRC, \
-      _______, JP_BSLS, _______ ,_______, _______, JP_LT,   KC_CALC, KC_ENT,  JP_GT,   JP_COMM, KC_0,    JP_DOT,  JP_SLSH, KC_ENT \
+      KC_CALC, JP_BSLS, _______ ,_______, _______, JP_LT,   _______, _______, JP_GT,   KC_0,    JP_COMM, JP_DOT,  JP_SLSH, KC_ENT \
       ),
 
   /* Raise
