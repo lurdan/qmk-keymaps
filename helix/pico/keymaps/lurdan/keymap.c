@@ -58,6 +58,7 @@ enum macro_keycodes {
 
 //Tap
 #define RETRO_TAPPING
+#define TAPPING_TERM 100
 
 //#define XXX_RAIS LT(_RAISE,KC_XXX)
 #define TAB_LOWR LT(_LOWER,KC_TAB)
