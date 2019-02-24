@@ -40,6 +40,7 @@ enum custom_keycodes {
 #define ALT_MHEN RALT_T(KC_MHEN)
 #define ALT_HENK RALT_T(KC_HENK)
 #define SFT_BSLS RSFT_T(JP_BSLS)
+#define LCTL_YEN LCTL_T(JP_YEN)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
@@ -59,7 +60,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_QWERTY] = LAYOUT( \
   ESC_RAIS,KC_1,    KC_2,    KC_3,    KC_4,    KC_5,                   KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    JP_YEN, \
   KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                   KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    JP_MINS, \
-  KC_LCTL, KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                   KC_H,    KC_J,    KC_K,    KC_L,    JP_SCLN, JP_COLN, \
+  LCTL_YEN,KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                   KC_H,    KC_J,    KC_K,    KC_L,    JP_SCLN, JP_COLN, \
   KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B, JP_LBRC, JP_RBRC, KC_N,    KC_M,    JP_COMM, JP_DOT,  JP_SLSH, SFT_BSLS, \
                  KC_LGUI,ALT_MHEN,LCTL_SPC, KC_BSPC,TAB_LOWR,ENT_LOWR, KC_SPC,  RCTL_SPC,RAISE,   ALT_HENK \
 ),
@@ -108,23 +109,23 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 /* Lower
  * ,-----------------------------------------.             ,-----------------------------------------.
- * | Calc |      |      |      |      |      |             |      |   7  |   8  |   9  |   *  | Bksp |
+ * | Calc |   ?  |      |   ;  |   :  |   <  |             |   >  |   7  |   8  |   9  |   *  | Bksp |
  * |------+------+------+------+------+------|             |------+------+------+------+------+------|
- * |  Tab |   !  |   "  |   @  |   _  |   [  |             |   ]  |   4  |   5  |   6  |   -  |  =   |
+ * |  Tab |   !  |   "  |   #  |   $  |   [  |             |   ]  |   4  |   5  |   6  |   -  |  =   |
  * |------+------+------+------+------+------|             |------+------+------+------+------+------|
- * | Ctrl |   ~  |   '  |   #  |   &  |   (  |             |   )  |   1  |   2  |   3  |   +  |  ^   |
+ * | Ctrl |   ~  |   '  |   @  |   &  |   (  |             |   )  |   1  |   2  |   3  |   +  |  ^   |
  * |------+------+------+------+------+------+-------------+------+------+------+------+------+------|
- * | Shift|   %  |   `  |   $  |   |  |   {  |   <  |   >  |   }  |   0  |   ,  |   .  |   /  | Enter|
+ * | Shift|   %  |   `  |   _  |   |  |   {  |   [  |   ]  |   }  |   0  |   ,  |   .  |   /  | Enter|
  * `-------------+------+------+------+------+------+------+------+------+------+------+-------------'
- *               |  GUI |AltMhn|CtlSpc| Bksp |      |      |  Spc |CtlSpc|      |AltHen|
+ *               |  GUI |AltMhn|CtlSpc| Bksp |      |      |  Spc |   0  |      |AltHen|
  *               `---------------------------------------------------------------------'
  */
 [_LOWER] = LAYOUT( \
-  KC_CALC, _______, _______, _______, _______, _______,                   _______, KC_7,    KC_8,    KC_9,    JP_ASTR, KC_BSPC, \
-  KC_TAB,  JP_EXLM, JP_DQT,  JP_AT,   JP_UNDS, JP_LBRC,                   JP_RBRC, KC_4,    KC_5,    KC_6,    JP_MINS, JP_EQL, \
-  KC_LCTL, JP_TILD, JP_QUOT, JP_HASH, JP_AMPR, JP_LPRN,                   JP_RPRN, KC_1,    KC_2,    KC_3,    JP_PLUS, JP_CIRC, \
-  KC_LSFT, JP_PERC, JP_GRV,  JP_DLR,  JP_PIPE, JP_LCBR, JP_LT,   JP_GT,   JP_RCBR, KC_0,    JP_COMM, JP_DOT,  JP_SLSH, KC_ENT, \
-                    KC_LGUI,ALT_MHEN,LCTL_SPC, KC_BSPC, _______, _______, KC_SPC,  RCTL_SPC,_______,ALT_HENK \
+  KC_CALC, KC_QUES, _______, JP_SCLN, JP_COLN, JP_LT,                     JP_GT,   KC_7,    KC_8,    KC_9,    JP_ASTR, KC_BSPC, \
+  KC_TAB,  JP_EXLM, JP_DQT,  JP_HASH, JP_DLR,  JP_LBRC,                   JP_RBRC, KC_4,    KC_5,    KC_6,    JP_MINS, JP_EQL, \
+  LCTL_YEN,JP_TILD, JP_QUOT, JP_AT,   JP_AMPR, JP_LPRN,                   JP_RPRN, KC_1,    KC_2,    KC_3,    JP_PLUS, JP_CIRC, \
+  KC_LSFT, JP_PERC, JP_GRV,  JP_UNDS, JP_PIPE, JP_LCBR, JP_LBRC, JP_RBRC, JP_RCBR, KC_0,    JP_COMM, JP_DOT,  JP_SLSH, KC_ENT, \
+                    KC_LGUI,ALT_MHEN,LCTL_SPC, KC_BSPC, _______, _______, KC_SPC,  KC_0,     _______,ALT_HENK \
 ),
 
 /* Raise
